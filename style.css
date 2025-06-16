@@ -946,3 +946,23 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.stat-box h2 {
+  font-size: 3rem;
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 1.2rem;
+  color: #444;
+}

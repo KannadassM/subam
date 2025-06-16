@@ -139,6 +139,62 @@
   </div>
 </section>
 
+<section id="stats" class="section scroll-animate">
+  <div class="container stats-grid">
+    <div class="stat-box">
+      <h2><span class="count" data-target="750">0</span>+</h2>
+      <p>Satisfied Clients</p>
+    </div>
+    <div class="stat-box">
+      <h2><span class="count" data-target="1000">0</span>+</h2>
+      <p>Completed Projects</p>
+    </div>
+    <div class="stat-box">
+      <h2><span class="count" data-target="20">0</span>+</h2>
+      <p>Years of Experience</p>
+    </div>
+  </div>
+</section>
+<script>
+  const counters = document.querySelectorAll('.count');
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const speed = 200; // lower = faster
+
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  // Animate when visible on scroll
+  const statsSection = document.querySelector("#stats");
+  const statsObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        statsObserver.disconnect(); // Run only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  if (statsSection) statsObserver.observe(statsSection);
+</script>
+
+
+
   <section id="services" class="section alt-services">
   <div class="container">
     <h2>Our Services</h2>
@@ -264,7 +320,7 @@
 </section>
 
 <script>
-  const observer = new IntersectionObserver((entries) => {
+  const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
@@ -272,7 +328,7 @@
     });
   });
   document.querySelectorAll('.scroll-animate').forEach(el => {
-    observer.observe(el);
+    scrollObserver.observe(el);
   });
 </script>
 
