@@ -3,8 +3,9 @@
 <head>
 
   <!-- <h1 class="zoom-in">Subam</h1> -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   
 
@@ -23,23 +24,6 @@
 </head>
 <body>
   <!-- Navigation -->
- 
-
-  <!-- <header> -->
-    <!-- <div class="container nav">
-      <h1 class="logo"></h1>
-        <h1 class="logo scroll-top">
-  <a href="#">SUBAM BRICKS</a>
-</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header> -->
 <header>
   <div class="container nav">
   <h1 class="logo scroll-top">
@@ -85,15 +69,15 @@
 
   <!-- Founders Section -->
 <!-- <section id="founders" class="section"> -->
-    <section id="founders" class="section" data-aos="zoom-in"></section>
+ <section id="founders" class="section" data-aos="zoom-in">
   <div class="container">
     <h2>Meet Our Founders</h2>
     <div class="grid">
       <div class="card">
         <!-- <img src="images/founder1.jpg" alt="Founder 1"> -->
         <h3>Pandian.K</h3>
-      <p>With over <strong>20 years of hands-on experience</strong> in brick manufacturing, Pandian K has become a trusted name in the industry. Based in <strong>Theni</strong>, he founded Subam Bricks with a commitment to quality, tradition, and innovation.</p>
-      <p>Under his leadership, Subam Bricks has grown from a local supplier to a well-respected manufacturer, known for delivering durable, eco-friendly bricks that stand the test of time.</p>
+        <p>With over <strong>20 years of hands-on experience</strong> in brick manufacturing, Pandian K has become a trusted name in the industry. Based in <strong>Theni</strong>, he founded Subam Bricks with a commitment to quality, tradition, and innovation.</p>
+        <p>Under his leadership, Subam Bricks has grown from a local supplier to a well-respected manufacturer, known for delivering durable, eco-friendly bricks that stand the test of time.</p>
       </div>
       <div class="card">
         <!-- <img src="images/founder2.jpg" alt="Founder 2"> -->
@@ -105,6 +89,11 @@
     </div>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000 });</script>
+
+
 
 
   <!-- Products Section -->
@@ -142,6 +131,21 @@
     </div>
   </div>
 </section>
+
+<script>
+  const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    fadeInObserver.observe(el);
+  });
+</script>
+
 
 <section id="stats" class="section scroll-animate">
   <div class="container stats-grid">
@@ -281,6 +285,13 @@
     </div>
   </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 
 
     <section id="contact" class="contact-section scroll-animate">

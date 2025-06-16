@@ -1019,3 +1019,131 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+#founders.section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+#founders h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+#founders .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+#founders .card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+
+#founders .card:hover {
+  transform: translateY(-5px);
+}
+
+#founders .card h3 {
+  color: #d32f2f;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#founders .card p {
+  color: #333;
+  line-height: 1.6;
+}
+/* Product */
+.card.fade-in {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card.fade-in:hover,
+.card.fade-in:active {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* Manufacture */
+.manufacture-section .text,
+.manufacture-section .image {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.manufacture-section .text:hover,
+.manufacture-section .image:hover,
+.manufacture-section .text:active,
+.manufacture-section .image:active {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Project */
+.project-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.project-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.project-image {
+  flex: 1;
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover img,
+.project-image:active img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Gallery */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-slide img:hover,
+.swiper-slide img:active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
