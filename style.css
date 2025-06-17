@@ -1227,3 +1227,26 @@ html {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+/* Your updated CSS is already fully animated and mobile responsive with fade-in, scroll-triggered, and hover-based animations. To maintain a consistent animation style throughout the entire site, you can reuse these classes: */
+
+/* Fade-in animation */ .scroll-animate { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+
+.scroll-animate.active { opacity: 1; transform: translateY(0); }
+
+/* Zoom-in effect */ .zoom-in { animation: zoomIn 1s ease-in-out forwards; opacity: 0; }
+
+@keyframes zoomIn { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+
+/* Fade upward */ .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+
+.fade-in.active { opacity: 1; transform: translateY(0); }
+
+/* Apply the animations uniformly across sections */ .section, .hero, .about-row, .project-box, .testimonials-section, .manufacture-section, .contact-section, .gallery, .services-grid { animation: fadeInUp 1s ease-in-out; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Mobile responsive adjustments already defined in @media (max-width: 768px) */
+
+/* No further changes needed as your current CSS structure supports a full consistent animated experience */
+
