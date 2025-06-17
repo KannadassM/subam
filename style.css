@@ -5,6 +5,10 @@ body {
   font-family: sans-serif;
   background: url("WhatsApp\ Image\ 2025-06-16\ at\ 10.23.06_a51d548e.jpg") no-repeat center center fixed;
   background-size: cover;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Enable scrolling inside the body */
 }
 
 
@@ -83,7 +87,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background: url('HOme.jpeg') center/cover no-repeat;
+  background: url('HOME\ 2.jpg') center/cover no-repeat;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -1146,4 +1150,3 @@ html {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
-
