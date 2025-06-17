@@ -911,6 +911,7 @@ html {
   scroll-behavior: smooth;
 }
 /* End */
+
 /* Contact */
 .contact-section {
   padding: 60px 20px;
@@ -925,7 +926,7 @@ html {
   background: rgba(0, 0, 0, 0.05);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 .contact-info h2 {
@@ -1148,5 +1149,51 @@ html {
 .swiper-slide img:hover,
 .swiper-slide img:active {
   transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgb(0, 0, 0);
+}
+/* anotherContact */
+.contact-section {
+  background: #fefefe;
+  padding: 60px 20px;
+  border-top: 4px solid #b22222;
+}
+
+.contact-flex {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 600px;
+  font-size: 1rem;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #b22222;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 15px;
+  color: #0c0c0c;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dotted #ffffff;
+}
+
+.contact-info a:hover {
+  color: #b22222;
+  text-decoration: underline;
 }
