@@ -1,4 +1,22 @@
+/* Fill right side blank space with a fixed decorative element */
+.right-blank-space {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100vh;
+  background: linear-gradient(to left, #fff8f0 60%, transparent 100%);
+  z-index: 900;
+  pointer-events: none;
+  /* Optional: add a subtle shadow for separation */
+  box-shadow: -6px 0 16px -8px rgba(178,34,34,0.15);
+}
 
+@media (max-width: 1200px) {
+  .right-blank-space {
+    display: none;
+  }
+}
 body {
   margin: 0;
   padding: 0;
