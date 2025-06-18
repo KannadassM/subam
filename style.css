@@ -1282,3 +1282,8 @@ html {
     text-align: left;
   }
 }
+
+.video-header,
+.bg-video {
+  display: none !important;
+}
