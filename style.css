@@ -1197,3 +1197,51 @@ html {
   color: #b22222;
   text-decoration: underline;
 }
+
+/* Hamburger toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Dropdown nav for mobile */
+.dropdown-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .dropdown-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #b22222;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .dropdown-nav.show {
+    display: flex;
+  }
+
+  .dropdown-nav a {
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    text-align: left;
+  }
+
+  .dropdown-nav a:hover {
+    background-color: #8b1a1a;
+  }
+}

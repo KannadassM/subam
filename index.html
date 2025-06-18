@@ -32,14 +32,14 @@
   </h1>
 
   <!-- Desktop nav (hidden on mobile) -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+<nav class="dropdown-nav" id="dropdown-nav">
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 </header>
 
@@ -52,6 +52,15 @@
     <!-- <a href="#contact" class="btn">Get a Quote</a> -->
   </div>
 </header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('dropdown-nav');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
 
 
 <!-- About Us Section -->
