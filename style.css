@@ -87,6 +87,18 @@ nav a:hover {
   color: #ffc107;
 }
 
+ @media (min-width: 768px) {
+      .desktop-nav {
+        display: flex !important;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      #menu-toggle,
+      #dropdown-nav {
+        display: none !important;
+      }
+    }
+
 /* Hero Section */
 .hero {
   background: url('HOME\ 2.jpg') center/cover no-repeat;
@@ -1210,18 +1222,39 @@ html {
   z-index: 1001;
 }
 
-/* Nav bar default for desktop */
-.dropdown-nav {
+
+/* Desktop nav */
+#dropdown-nav {
   display: flex;
   gap: 1.5rem;
 }
 
+#dropdown-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#dropdown-nav a:hover {
+  color: #ffc107;
+}
+
+/* Hamburger icon hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile nav */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
-  .dropdown-nav {
+  #dropdown-nav {
     display: none;
     flex-direction: column;
     background-color: #b22222;
@@ -1235,20 +1268,13 @@ html {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
 
-  .dropdown-nav.show {
+  #dropdown-nav.show {
     display: flex;
   }
 
-  .dropdown-nav a {
-    color: white;
+  #dropdown-nav a {
     padding: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    text-decoration: none;
     text-align: left;
   }
-
-  .dropdown-nav a:hover {
-    background-color: #8b1a1a;
-  }
 }
-
