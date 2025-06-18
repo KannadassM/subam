@@ -21,19 +21,21 @@ header {
   z-index: 999;
 
 }
-
 .main-header {
   height: 100vh;
   background-image: url("HOME\ 2.jpg"); /* 👈 Replace with your image */
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: sticky;
+  top: 50px; /* Adjust this value to match your header height */
+  z-index: 998;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: rgb(0, 0, 0);
 }
+
 
 .main-header .overlay {
   background-color: rgba(255, 255, 255, 0); /* optional dark overlay */
@@ -1199,14 +1201,16 @@ html {
 }
 
 /* Hamburger toggle button */
+/* Toggle button */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
   color: white;
+  z-index: 1001;
 }
 
-/* Dropdown nav for mobile */
+/* Nav bar default for desktop */
 .dropdown-nav {
   display: flex;
   gap: 1.5rem;
@@ -1223,11 +1227,12 @@ html {
     background-color: #b22222;
     position: absolute;
     top: 70px;
-    right: 20px;
-    width: 200px;
+    right: 10px;
+    width: 220px;
     border-radius: 8px;
+    padding: 10px;
     z-index: 1000;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
 
   .dropdown-nav.show {
@@ -1236,8 +1241,9 @@ html {
 
   .dropdown-nav a {
     color: white;
-    padding: 10px 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
     text-align: left;
   }
 
@@ -1245,3 +1251,4 @@ html {
     background-color: #8b1a1a;
   }
 }
+
