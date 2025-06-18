@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url("WhatsApp\ Image\ 2025-06-16\ at\ 10.23.06_a51d548e.jpg") no-repeat center center fixed;
+  background-color: #ffffff;
   background-size: cover;
   height: 100vh;
   overflow-y: auto;
@@ -27,7 +27,7 @@ header {
 }
 .main-header {
   height: 100vh;
-  background-image: url("HOME\ 2.jpg"); /* 👈 Replace with your image */
+  background-color: #ffffff;/* 👈 Replace with your image*/
   background-size: cover;
   background-position: center;
   position: sticky;
